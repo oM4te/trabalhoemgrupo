@@ -1,0 +1,74 @@
+Trabalhar em grupo no GitHub é uma ótima forma de colaborar em projetos. Aqui está um passo a passo para ajudá-lo a começar:
+
+Criar um repositório: Se você ainda não tem um repositório, crie um novo no GitHub. Dê um nome ao seu repositório e adicione uma descrição.
+
+Adicionar colaboradores: No repositório, vá para a aba "Settings" (Configurações), depois clique em "Collaborators" (Colaboradores). Adicione os nomes de usuário do GitHub das pessoas que você deseja incluir no projeto. Eles receberão um convite para colaborar.
+
+Clonar o repositório: Cada colaborador deve clonar o repositório para o seu computador. Para isso, use o comando git clone <URL do repositório> no terminal.
+
+Criar e trabalhar em branches: Para evitar conflitos, cada colaborador deve trabalhar em uma branch separada. Crie uma nova branch com git checkout -b <nome-da-branch>. Após finalizar as mudanças, faça um commit (git commit -m "mensagem do commit") e envie as alterações para o GitHub com git push origin <nome-da-branch>.
+
+Revisar e mesclar branches: Quando as mudanças estiverem prontas para serem integradas, crie um pull request no GitHub. Isso permite que outros colaboradores revisem o código antes de ele ser mesclado na branch principal. Após a revisão, a branch pode ser mesclada (merged).
+
+Resolver conflitos: Se houver conflitos entre as branches, o GitHub informará. Resolva os conflitos localmente e faça um novo commit.
+
+Comunicação: Mantenha uma boa comunicação com sua equipe. Utilize as funcionalidades de issues e pull requests do GitHub para discutir problemas e soluções.
+1. Clonar o repositório:
+Clonar um repositório cria uma cópia local do repositório remoto:
+
+bash
+git clone <URL-do-repositório>
+Isso copia todos os arquivos e o histórico de commits para o seu computador.
+
+2. Criar uma nova branch:
+Trabalhar em branches separadas evita conflitos. Crie uma nova branch para trabalhar em uma funcionalidade específica:
+
+bash
+git checkout -b <nome-da-branch>
+Isso cria e move você para a nova branch.
+
+3. Verificar o status do repositório:
+Verifique quais arquivos foram modificados e estão prontos para serem commitados:
+
+bash
+git status
+Isso mostra um resumo do status atual do repositório.
+
+4. Adicionar alterações ao staging:
+Adicione os arquivos modificados ao staging, preparando-os para o commit:
+
+bash
+git add <arquivo>
+# ou para adicionar todos os arquivos modificados:
+git add .
+5. Fazer commit das alterações:
+Commite as mudanças com uma mensagem descritiva:
+
+bash
+git commit -m "mensagem do commit"
+Isso salva suas mudanças localmente.
+
+6. Enviar alterações para o repositório remoto:
+Envie suas mudanças para o GitHub:
+
+bash
+git push origin <nome-da-branch>
+7. Atualizar a branch local:
+Para manter sua branch local atualizada com o repositório remoto:
+
+bash
+git pull origin <nome-da-branch>
+8. Criar um pull request (PR):
+Isso é feito na interface do GitHub. Vá para a aba "Pull requests" e clique em "New pull request" para iniciar uma revisão de código.
+
+9. Mesclar uma branch (merge):
+Após a aprovação do PR, mescle a branch com:
+
+bash
+git merge <nome-da-branch>
+10. Resolver conflitos:
+Se houver conflitos, resolva-os manualmente nos arquivos. Depois, adicione os arquivos resolvidos e commit novamente:
+
+bash
+git add <arquivo-conflitado>
+git commit -m "Resolver conflitos"
